@@ -48,7 +48,8 @@ Tell me any text, color, or animation changes and I'll update it. — Cel
 
     /* Heart shapes around border */
     
-    .heart-frame::bef{background-image:radial-gradient(circle at 30% 80%, rgba(255,190,200,0.7) 0 8px, transparent 9px), radial-gradient(circle at 80% 60%, rgba(255,230,180,0.6) 0 8px, transparent 9px);}    
+    .heart-frame::before{background-image:radial-gradient(circle at 10% 10%, rgba(255,95,132,0.9) 0 8px, transparent 9px), radial-gradient(circle at 60% 30%, rgba(255,147,178,0.85) 0 8px, transparent 9px);}    
+        
 
     /* Inner badge */
     .badge{
@@ -100,7 +101,13 @@ Tell me any text, color, or animation changes and I'll update it. — Cel
       .heart-frame{border-width:8px}
       .badge{padding:18px}
     }
-
+  @keyframes wiggle{
+      0%{transform:rotate(0deg) scale(1)}
+      25%{transform:rotate(-3deg) scale(1.03)}
+      50%{transform:rotate(3deg) scale(1.02)}
+      75%{transform:rotate(-2deg) scale(1.03)}
+      100%{transform:rotate(0deg) scale(1)}
+    }
   </style>
 </head>
 <body>
@@ -108,7 +115,7 @@ Tell me any text, color, or animation changes and I'll update it. — Cel
     <div class="heart-frame">
       <div class="badge">
         <div class="title">#Serazi6thWin</div>
-        <div class="subtitle">Cie monthsarry sama aku cihuy, love you by... </div>
+        <div class="subtitle">Cie monthsarry sama aku hari ini cihuy...I love you by..</div>
       </div>
     </div>
 
