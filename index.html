@@ -1,0 +1,124 @@
+<!--
+Cute HTML template: "Serazi6th Win" in a heart frame.
+Copy-paste this single-file HTML into a .html file and open in browser.
+Tell me any text, color, or animation changes and I'll update it. — Cel
+-->
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>serazi6th win — frame</title>
+  <style>
+    /* Reset */
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%}
+    body{
+      display:flex;align-items:center;justify-content:center;
+      background: linear-gradient(135deg,#fff7fb 0%, #fffef9 50%, #f7fff9 100%);
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      color:#333;
+      padding:24px;
+    }
+
+    .card{
+      width:min(920px,94vw);
+      background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.85));
+      border-radius:28px;
+      padding:36px;
+      box-shadow: 0 10px 30px rgba(19,12,46,0.08), inset 0 1px 0 rgba(255,255,255,0.6);
+      position:relative;
+      overflow:hidden;
+      display:grid;place-items:center;
+    }
+
+    /* Heart frame */
+    .heart-frame{
+      width:86%;
+      max-width:720px;
+      padding:40px;
+      border-radius:20px;
+      border:4px solid rgba(255,95,132,0.25);
+      display:grid;
+      place-items:center;
+      position:relative;
+      background:linear-gradient(180deg, rgba(255,240,245,0.4), rgba(255,255,255,0.6));
+      transform:none;
+    }
+
+    /* Heart shapes around border */
+    
+    .heart-frame::bef{background-image:radial-gradient(circle at 30% 80%, rgba(255,190,200,0.7) 0 8px, transparent 9px), radial-gradient(circle at 80% 60%, rgba(255,230,180,0.6) 0 8px, transparent 9px);}    
+
+    /* Inner badge */
+    .badge{
+      width:82%;height:82%;border-radius:32px;display:flex;flex-direction:column;align-items:center;justify-content:center;
+      background:linear-gradient(180deg, rgba(255,255,255,0.75), rgba(255,255,255,0.65));
+      transform:rotate(3deg);
+      text-align:center;padding:24px;box-shadow:0 6px 18px rgba(19,12,46,0.06);
+    }
+
+    .title{
+      font-size:clamp(28px,5vw,48px);
+      font-weight:800;
+      letter-spacing:0.6px;
+      color:#ff5f84;
+      text-transform:lowercase;
+      text-shadow:0 2px 0 rgba(255,255,255,0.6);
+      margin-bottom:8px;
+      animation:wiggle 1.8s ease-in-out infinite;
+    }
+    .subtitle{
+      font-size:clamp(12px,2.5vw,16px);color:#6b6b6b;margin-bottom:18px;
+    }
+
+    .tag{
+      display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:999px;font-weight:700;
+      background:linear-gradient(90deg, rgba(255,95,132,0.12), rgba(255,147,178,0.06));border:1px solid rgba(255,95,132,0.12);
+      box-shadow:0 4px 12px rgba(255,95,132,0.06);
+    }
+
+    /* floating tiny hearts */
+    .hearts{position:absolute;inset:0;pointer-events:none}
+    .hearts i{position:absolute;font-style:normal;opacity:0.9;transform-origin:center;animation:floatUp linear infinite;}
+    .hearts i::before{content:'❤'}
+    .h1{left:12%;top:72%;font-size:18px;animation-duration:9s}
+    .h2{left:82%;top:18%;font-size:26px;animation-duration:7s}
+    .h3{left:72%;top:84%;font-size:14px;animation-duration:10s}
+    .h4{left:22%;top:18%;font-size:22px;animation-duration:8.2s}
+    .h5{left:50%;top:8%;font-size:20px;animation-duration:11s}
+
+    @keyframes floatUp{
+      0%{transform:translateY(0) scale(1);opacity:1}
+      50%{transform:translateY(-24px) scale(1.04);opacity:0.9}
+      100%{transform:translateY(-60px) scale(0.9);opacity:0}
+    }
+
+    /* responsive tweaks */
+    @media (max-width:520px){
+      .card{padding:20px;border-radius:18px}
+      .heart-frame{border-width:8px}
+      .badge{padding:18px}
+    }
+
+  </style>
+</head>
+<body>
+  <div class="card" role="img" aria-label="Frame for Serazi 6th win">
+    <div class="heart-frame">
+      <div class="badge">
+        <div class="title">#Serazi6thWin</div>
+        <div class="subtitle">Cie monthsarry sama aku cihuy, love you by... </div>
+      </div>
+    </div>
+
+    <div class="hearts" aria-hidden="true">
+      <i class="h1"></i>
+      <i class="h2"></i>
+      <i class="h3"></i>
+      <i class="h4"></i>
+      <i class="h5"></i>
+    </div>
+  </div>
+</body>
+</html>
